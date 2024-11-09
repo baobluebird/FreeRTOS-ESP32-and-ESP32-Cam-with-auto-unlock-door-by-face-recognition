@@ -169,7 +169,7 @@ void distanceInDoorTask(void *pvParameters) {
 void blynkTask(void *pvParameters) {
   while (1) {
     Blynk.run();
-    vTaskDelay(pdMS_TO_TICKS(10)); // Allow other tasks to run
+    vTaskDelay(pdMS_TO_TICKS(10));// Avoid CPU Overwork, small time so consider blynk task always running
   }
 }
 
